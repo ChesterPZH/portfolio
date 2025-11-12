@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chester - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Zhaohan(Chester) Pan" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Zhaohan(Chester) Pan">Zhaohan(Chester) Pan</h1>
+
+          <p class="title">HCI Researcher | Designer | Educator</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Contact</p>
+
+              <a href="mailto:chester052519@gmail.com" class="contact-link">chester052519@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Google Scholar</p>
+
+              <a href="https://scholar.google.com/citations?user=SMgvebMAAAAJ&hl=en" class="u-link">Link</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">CV</p>
+              <a href="./assets/pdf/chester_CV.pdf" class="u-link">Chester Pan's CV</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Sacramento, California, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Home</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Press</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>About</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        ===================================================================
+        #HOME PAGE
+        ===================================================================
+      -->
+
+      <article class="about  active" data-page="home">
+
+        <header>
+          <h2 class="h2 article-title">Home</h2>
+        </header>
+
+        <!--
+          - Home: Introduction Text
+        -->
+        <section class="description">
+          <p class="about-text">
+            My name is Zhaohan(Chester) Pan.  
+            I received my M.S. degree in Mechanical Engineering from Stanford University🌲and my B.S. degree in Civil Engineering from the University of Washington 🌸.
+            I am a member of <a href="https://shape.stanford.edu/" class="u-link">SHAPE Lab</a> at Stanford, while also directing the <a href="#" class="u-link">CRAFT^2 Lab</a> as a Principal Investigator.
+            I am passionate about designing and developing contemporary computer interfaces while exploring how users perceive them to reimagine Human-Computer Interaction.
+            <br><br>
+            Check out more pages to explore my path and works!
+          </p>
+        </section>
+
+        <!--
+          - Home: Vision of Work
+        -->
+        <section class="description">
+          <h3 class="h3">Vision of Work</h3>
+          <h4 class="h4">Embodied and Intelligent Interactivity - Reimagining Everyday Activities with XR Spatial Computing</h4>
+          <p class="about-text">
+            "Yet almost all new products reduce interaction to pushing a labeled button They viewed this trend as a failure to account for people as sensual beings; 
+            a failure to focus on perceptual motor skills as a source of interaction inspiration, due to an overreliance on cognition as a singular theoretical stance in interaction design, 
+            and a failure to consider aesthetics as a critical component of interaction."          
+            <br><br>
+            — Ways of Knowing in HCI
+          </p>
+        </section>
+
+        <section class="description">
+          <p class="about-text">
+            Computer interface should reach beyond on-screen clicks to involve touch, hearing, and spatial perception, to truly break such limitations. 
+             entended reality (XR) systems realize this ambition by “downgrading” the computer interface, blending it directly into everyday 3D world activity. 
+             Such systems let users apply their natural spatial perceptual abilities, including depth, orientation, coordinated motor movement, 
+             to interact with augmented virtual content while still engaging with the physical world, to move beyond the constraint of passive screens.      
+            <br><br>
+            My primary research goal is to re-imagine human activities through XR spatial computing, highlighting our innate spatial perceptual routines, 
+            and to create tools, interfaces, and experiences that support these activities.
+          </p>
+        </section>
+
+        <!--
+          - Home: What Else (Service Items)
+        -->
+        <section class="service">
+
+          <h3 class="h3 service-title">What Else</h3>
+
+          <ul class="service-list">
+
+            <!-- Service Item: CRAFT^2 -->
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Home/craft2.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">CRAFT^2</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <!-- Service Item: Design -->
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Design</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <!-- Service Item: Outreach -->
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Outreach</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <!-- Service Item: Teaching -->
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Teaching</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - Home: Education Timeline
+        -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- Education Item: University of Washington -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University of Washington 🌸</h4>
+
+              <span>2020 — 2023</span>
+
+              <p class="timeline-text">
+                B.S. in Civil Engineering, Magna Cum Laud
+              </p>
+
+            <!-- Education Item: Stanford University -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Stanford University 🌲</h4>
+
+              <span>2023 — 2025</span>
+
+              <p class="timeline-text">
+                M.S. in Mechanical Engineering
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!--
+          - Home: News Timeline
+        -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">News</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- News Item: CRAFT^2 Lab Foundation -->
+            <li class="timeline-item">
+              <span>Apr 11, 2024</span>
+              <p class="timeline-text">We announced the fondation of CRAFT^2 Lab.</p>
+            </li>
+          
+            <!-- News Item: Fab City Challenge Demo -->
+            <li class="timeline-item">
+              <span>Aug 03, 2024</span>
+              <p class="timeline-text">We present our project demo of Fab City Challenge China at Shenzhen Library.</p>
+            </li>
+          
+            <!-- News Item: Tangible Compass Paper -->
+            <li class="timeline-item">
+              <span>Nov 23, 2024</span>
+              <p class="timeline-text">The <a href="https://dl.acm.org/doi/full/10.1145/3758871.3758914" class="u-link">Tangible Compass</a> paper is presented at CHCHI '24, Shenzhen, China.</p>
+            </li>
+          
+            <!-- News Item: Stanford Graduation -->
+            <li class="timeline-item">
+              <span>Jun 15, 2025</span>
+              <p class="timeline-text">Graduated from Stanford University with a M.S. degree in Mechanical Engineering.</p>
+            </li>
+          
+            <!-- News Item: karP Paper -->
+            <li class="timeline-item">
+              <span>Jul 08, 2025</span>
+              <p class="timeline-text">The <a href="https://dl.acm.org/doi/full/10.1145/3715668.3735607" class="u-link">karP</a> paper is demonstrated at DIS' 25, Funchal, Madeira.</p>
+            </li>
+          
+            <!-- News Item: mARker Paper -->
+            <li class="timeline-item">
+              <span>Oct 10, 2025</span>
+              <p class="timeline-text">The mARker paper is demonstrated at ISMAR '25, Daejeon, Korea.</p>
+            </li>
+          
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+      <!--
+        ===================================================================
+        #PUBLICATIONS PAGE
+        ===================================================================
+      -->
+
+      <article class="publications" data-page="publications">
+
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <!--
+          - Publications: Filter Section
+        -->
+        <section class="projects">
+
+          <!--
+            - Publications: Filter Buttons (Desktop)
+          -->
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn data-filter-value="all">All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn data-filter-value="xr">XR / Spatial Computing 🌐</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn data-filter-value="haptics">Haptics 👋</button>
+            </li>
+
+          </ul>
+
+          <!--
+            - Publications: Filter Dropdown (Mobile)
+          -->
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item data-filter-value="all">All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item data-filter-value="xr">XR / Spatial Computing 🌐</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item data-filter-value="haptics">Haptics 👋</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <!--
+            - Publications: Publication List
+          -->
+          <ul class="project-list">
+
+            <!-- Publication Item: rulAR -->
+            <li class="project-item  active" data-filter-item data-category="xr">
+              <a href="#publication-rular" data-detail-target="publication-rular">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Publications/rulAR/rulAR-tn.jpg" alt="rulAR" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">rulAR</h3>
+
+                <p class="project-subtitle">ACM ICHEC '25</p>
+
+                <p class="project-category">Vison Pro · Spatial Computing · Measurement</p>
+
+              </a>
+            </li>
+
+            <!-- Publication Item: mARker -->
+            <li class="project-item  active" data-filter-item data-category="xr">
+              <a href="#publication-marker" data-detail-target="publication-marker">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Publications/mARker/mARker-tn.jpg" alt="mARker" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">mARker</h3>
+
+                <p class="project-subtitle">IEEE ISMAR '25</p>
+
+                <p class="project-category">iPad AR · Spatial Sketching · Tracking</p>
+
+              </a>
+            </li>
+
+            <!-- Publication Item: karP -->
+            <li class="project-item  active" data-filter-item data-category="haptics,xr">
+              <a href="#publication-karp" data-detail-target="publication-karp">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Publications/karP/karP-tn.jpg" alt="karP" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">karP</h3>
+
+                <p class="project-subtitle">ACM DIS '25</p>
+
+                <p class="project-category">Knesthetics · Mobile AR · Tracking</p>
+
+              </a>
+            </li>
+
+            <!-- Publication Item: Tangible Compass -->
+            <li class="project-item  active" data-filter-item data-category="haptics">
+              <a href="#publication-tangiblecompass" data-detail-target="publication-tangiblecompass">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Publications/TC/TC-tn.jpg" alt="Tangible Compass" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Tangible Compass</h3>
+
+                <p class="project-subtitle">ACM CHCHI '24</p>
+
+                <p class="project-category">Accessibile Navigation</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+      <!--
+        ===================================================================
+        #PUBLICATION DETAIL PAGES
+        ===================================================================
+      -->
+
+      <!--
+        - Publication Detail: rulAR
+      -->
+      <article class="publication-detail rular-detail" data-page="publication-rular">
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <!-- Publication Detail: Description -->
+        <section class="description">
+          <h3 class="h3">rulAR: Spatial Measurement in Indoor Scenes via Intelligent Labeling and Immersive Visualization</h3>
+          <h4 class="h4"><span style="text-decoration: underline;">Pan, Zhaohan</span></h4>
+          <h4 class="h4">Accepted to ACM ICHEC '25</h4>
+        </section>
+
+        <!-- Publication Detail: Highlights -->
+        <section class="description">
+          <h3 class="h3">项目亮点</h3>
+          <h4 class="h4">Key Features</h4>
+          <p class="about-text">
+            - 空间定位与交互结合实现快捷测量。<br>
+            - 低学习成本，贴近真实工具使用心智模型。<br>
+            - 面向创作、教育与工程应用场景。
+          </p>
+        </section>
+
+        <!-- Publication Detail: Preview Image -->
+        <section class="description">
+          <h3 class="h3">预览图</h3>
+          <h4 class="h4">Preview</h4>
+          <figure class="project-img" style="margin-top: 15px;">
+            <img src="./assets/images/project-1.jpg" alt="rulAR preview" loading="lazy">
+          </figure>
+        </section>
+
+        <!-- Publication Detail: Back Link -->
+        <section class="description">
+          <a href="#" class="u-link" data-detail-target="publications">Back to Publications</a>
+        </section>
+      </article>
+
+      <!--
+        - Publication Detail: mARker
+      -->
+      <article class="publication-detail marker-detail" data-page="publication-marker">
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <!-- Publication Detail: Description -->
+        <section class="description">
+          <h3 class="h3">mARker: Hybrid-Interfaced Spatial Sketching via iPad AR, Apple Pencil, and an Instantly Crafted Tracker</h3>
+          <h4 class="h4"><span style="text-decoration: underline;">Pan, Zhaohan</span></h4>
+          <h4 class="h4">In Proceedings of IEEE ISMAR '25 Adjunct</h4>
+        </section>
+
+        <!-- Publication Detail: Highlights -->
+        <section class="description">
+          <h3 class="h3">项目亮点</h3>
+          <h4 class="h4">Key Features</h4>
+          <p class="about-text">
+            - 基于平板的空间绘制体验。<br>
+            - 支持多人协作与实时标注。<br>
+            - 兼容多种追踪方式与硬件配置。
+          </p>
+        </section>
+
+        <!-- Publication Detail: Preview Image -->
+        <section class="description">
+          <h3 class="h3">预览图</h3>
+          <h4 class="h4">Preview</h4>
+          <figure class="project-img" style="margin-top: 15px;">
+            <img src="./assets/images/project-1.jpg" alt="mARker preview" loading="lazy">
+          </figure>
+        </section>
+
+        <!-- Publication Detail: Back Link -->
+        <section class="description">
+          <a href="#" class="u-link" data-detail-target="publications">Back to Publications</a>
+        </section>
+      </article>
+
+      <!--
+        - Publication Detail: karP
+      -->
+      <article class="publication-detail karp-detail" data-page="publication-karp">
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <!-- Publication Detail: Description -->
+        <section class="description">
+          <h3 class="h3">karP: an experiential prototype for Kinesthetic Augmented Reality on mobile — Playful, Portable, Producible</h3>
+          <h4 class="h4"><span style="text-decoration: underline;">Pan, Zhaohan</span>, Ge, G., Lu, H., Meng, Z., Wu, H., Yang, Q., Liang, J.</h4>
+          <h4 class="h4">In Proceedings of ACM DIS '25 Companion</h4>
+        </section>
+
+        <!-- Publication Detail: Highlights -->
+        <section class="description">
+          <h3 class="h3">项目亮点</h3>
+          <h4 class="h4">Key Features</h4>
+          <p class="about-text">
+            - 交互技术与系统实现相结合。<br>
+            - 关注用户体验与可扩展性。<br>
+            - 面向研究与应用双场景。
+          </p>
+        </section>
+
+        <!-- Publication Detail: Preview Image -->
+        <section class="description">
+          <h3 class="h3">预览图</h3>
+          <h4 class="h4">Preview</h4>
+          <figure class="project-img" style="margin-top: 15px;">
+            <img src="./assets/images/project-2.png" alt="Publication preview" loading="lazy">
+          </figure>
+        </section>
+
+        <!-- Publication Detail: BibTeX Citation -->
+        <section class="description">
+          <h4 class="h4">BibTeX Citation</h4>
+          <pre class="bibtex-code"><code>@inbook{10.1145/3715668.3735607,
+author    = {Pan, Zhaohan and Ge, Gaolin and Lu, Haoran and Meng, Zhihao and Wu, Hongrui and Yang, Qifeng and Liang, Jingyang},
+title     = {karP: an experiential prototype for Kinesthetic Augmented Reality on mobile — Playful, Portable, Producible},
+booktitle = {Companion Publication of the 2025 ACM Designing Interactive Systems Conference},
+year      = {2025},
+doi       = {10.1145/3715668.3735607}
+}</code></pre>
+        </section>
+
+        <!-- Publication Detail: Back Link -->
+        <section class="description">
+          <a href="#" class="u-link" data-detail-target="publications">Back to Publications</a>
+        </section>
+      </article>
+
+      <!--
+        - Publication Detail: Tangible Compass
+      -->
+      <article class="publication-detail tc-detail" data-page="publication-tangiblecompass">
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <!-- Publication Detail: Description -->
+        <section class="description">
+          <h3 class="h3">Tangible Compass: An Affordable and DIY-Friendly Handheld Kinesthetic Device for Haptic Accessible Navigation</h3>
+          <h4 class="h4"><span style="text-decoration: underline;">Pan, Zhaohan</span>, Ge, G., Jiang, Z., Meng, Z., Wang, L., Wu, H., Wang, L., Liang, J., Wen, H.</h4>
+          <h4 class="h4">In Proceedings of ACM CHCHI '24</h4>
+        </section>
+
+        <!-- Publication Detail: Highlights -->
+        <section class="description">
+          <p class="about-text">
+            Aim to design a low-cost, open-source device providing additional sensory feedback to support accessible navigation, we introduce Tangible Compass, 
+            a handheld haptic device as an add-on for smartphone navigation functions, providing force guidance in various accessible navigation scenarios.
+          </p>
+          <p class="about-text">
+            Its functionality is achieved through smartphone sensor data streaming, scenario-based algorithmic force rendering, and a compact one Degree of Freedom (1-DoF) 
+            kinesthetic device transmitting forces. We featured interaction scenarios like route orientating navigation and clearance detection.
+          </p>
+        </section>
+
+        <!-- Publication Detail: Preview Image -->
+        <section class="description">
+          <h3 class="h3">预览图</h3>
+          <h4 class="h4">Preview</h4>
+          <figure class="project-img" style="margin-top: 15px;">
+            <img src="./assets/images/project-1.jpg" alt="Publication preview" loading="lazy">
+          </figure>
+        </section>
+
+        <!-- Publication Detail: BibTeX Citation -->
+        <section class="description">
+          <h4 class="h4">BibTeX Citation</h4>
+          <pre class="bibtex-code"><code>@inproceedings{10.1145/3758871.3758914,
+author    = {Pan, Zhaohan and Ge, Gaolin and Jiang, Zhuojian and Meng, Zhihao and Wang, Lushan and Wu, Hongrui and Wang, Lechen and Liang, Jingyang and Wen, Hiuting},
+title     = {Tangible Compass: An Affordable and DIY-Friendly Handheld Kinesthetic Device for Haptic Accessible Navigation},
+booktitle = {Proceedings of the Twelfth International Symposium of Chinese CHI (CHCHI '24)},
+year      = {2025},
+doi       = {10.1145/3758871.3758914}
+}</code></pre>
+        </section>
+
+        <!-- Publication Detail: Back Link -->
+        <section class="description">
+          <a href="#" class="u-link" data-detail-target="publications">Back to Publications</a>
+        </section>
+      </article>
+
+
+
+
+
+      <!--
+        ===================================================================
+        #PROJECTS PAGE
+        ===================================================================
+      -->
+
+      <article class="projects" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <!--
+          - Projects: Filter Section
+        -->
+        <section class="projects">
+
+          <!--
+            - Projects: Filter Buttons (Desktop)
+          -->
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn data-filter-value="all">All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn data-filter-value="stanford">Stanford 🌲</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn data-filter-value="uw">UW 🌸</button>
+            </li>
+
+          </ul>
+
+          <!--
+            - Projects: Filter Dropdown (Mobile)
+          -->
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item data-filter-value="all">All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item data-filter-value="stanford">Stanford 🌲</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item data-filter-value="uw">UW 🌸</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <!--
+            - Projects: Project List
+          -->
+          <ul class="project-list">
+
+            <!-- Project Item: 3dpc -->
+            <li class="project-item  active" data-filter-item data-category="stanford">
+              <a href="#project-3dpc" data-detail-target="project-3dpc">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Projects/3dpc-tn.jpg" alt="3dpc" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">3dpc</h3>
+
+                <p class="project-category">3D CV</p>
+
+              </a>
+            </li>
+
+            <!-- Project Item: ECHO -->
+            <li class="project-item  active" data-filter-item data-category="stanford">
+              <a href="#project-echo" data-detail-target="project-echo">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Projects/echo-tn.jpg" alt="ECHO" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ECHO</h3>
+
+                <p class="project-category">Accessbility</p>
+
+              </a>
+            </li>
+
+            <!-- Project Item: Caligraphy -->
+            <li class="project-item  active" data-filter-item data-category="stanford">
+              <a href="#project-caligraphy" data-detail-target="project-caligraphy">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Projects/caligraphy-tn.jpg" alt="Caligraphy" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Caligraphy</h3>
+
+                <p class="project-category">Accessbility</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        ===================================================================
+        #PROJECT DETAIL PAGES
+        ===================================================================
+      -->
+
+      <!--
+        - Project Detail: ECHO
+      -->
+      <article class="publication-detail echo-detail" data-page="project-echo">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <!-- Project Detail: Description -->
+        <section class="description">
+          <h3 class="h3">ECHO</h3>
+          <h4 class="h4">Overview</h4>
+          <p class="about-text">
+            ECHO is a research project that explores accessibility and user experience design.
+          </p>
+        </section>
+
+        <!-- Project Detail: Highlights -->
+        <section class="description">
+          <h3 class="h3">项目亮点</h3>
+          <h4 class="h4">Key Features</h4>
+          <p class="about-text">
+            - 通过沉浸式交互探索全新体验。<br>
+            - 结合触觉反馈强化用户感知。<br>
+            - 支持多场景拓展，例如教育、医疗与创意设计。
+          </p>
+        </section>
+
+        <!-- Project Detail: Preview Image -->
+        <section class="description">
+          <h3 class="h3">预览图</h3>
+          <h4 class="h4">Preview</h4>
+          <figure class="project-img" style="margin-top: 15px;">
+            <img src="./assets/images/Projects/echo-tn.jpg" alt="ECHO preview" loading="lazy">
+          </figure>
+        </section>
+
+        <!-- Project Detail: Back Link -->
+        <section class="description">
+          <a href="#" class="u-link" data-detail-target="projects">返回 Projects</a>
+        </section>
+      </article>
+
+      <!--
+        - Project Detail: 3dpc
+      -->
+      <article class="publication-detail 3dpc-detail" data-page="project-3dpc">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <!-- Project Detail: Description -->
+        <section class="description">
+          <h3 class="h3">ECHO</h3>
+          <h4 class="h4">Overview</h4>
+          <p class="about-text">
+            ECHO is a research project that explores accessibility and user experience design.
+          </p>
+        </section>
+
+        <!-- Project Detail: Highlights -->
+        <section class="description">
+          <h3 class="h3">项目亮点</h3>
+          <h4 class="h4">Key Features</h4>
+          <p class="about-text">
+            - 通过沉浸式交互探索全新体验。<br>
+            - 结合触觉反馈强化用户感知。<br>
+            - 支持多场景拓展，例如教育、医疗与创意设计。
+          </p>
+        </section>
+
+        <!-- Project Detail: Preview Image -->
+        <section class="description">
+          <h3 class="h3">预览图</h3>
+          <h4 class="h4">Preview</h4>
+          <figure class="project-img" style="margin-top: 15px;">
+            <img src="./assets/images/Projects/3dpc-tn.jpg" alt="3dpc preview" loading="lazy">
+          </figure>
+        </section>
+
+        <!-- Project Detail: Back Link -->
+        <section class="description">
+          <a href="#" class="u-link" data-detail-target="projects">返回 Projects</a>
+        </section>
+      </article>
+
+      <!--
+        - Project Detail: Caligraphy
+      -->
+      <article class="publication-detail caligraphy-detail" data-page="project-caligraphy">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <!-- Project Detail: Description -->
+        <section class="description">
+          <h3 class="h3">ECHO</h3>
+          <h4 class="h4">Overview</h4>
+          <p class="about-text">
+            ECHO is a research project that explores accessibility and user experience design.
+          </p>
+        </section>
+
+        <!-- Project Detail: Highlights -->
+        <section class="description">
+          <h3 class="h3">项目亮点</h3>
+          <h4 class="h4">Key Features</h4>
+          <p class="about-text">
+            - 通过沉浸式交互探索全新体验。<br>
+            - 结合触觉反馈强化用户感知。<br>
+            - 支持多场景拓展，例如教育、医疗与创意设计。
+          </p>
+        </section>
+
+        <!-- Project Detail: Preview Image -->
+        <section class="description">
+          <h3 class="h3">预览图</h3>
+          <h4 class="h4">Preview</h4>
+          <figure class="project-img" style="margin-top: 15px;">
+            <img src="./assets/images/Projects/caligraphy-tn.jpg" alt="caligraphy preview" loading="lazy">
+          </figure>
+        </section>
+
+        <!-- Project Detail: Back Link -->
+        <section class="description">
+          <a href="#" class="u-link" data-detail-target="projects">返回 Projects</a>
+        </section>
+      </article>
+
+            
+
+
+
+
+
+
+      <!--
+        ===================================================================
+        #PRESS PAGE
+        ===================================================================
+      -->
+
+      <article class="blog" data-page="press">
+
+        <header>
+          <h2 class="h2 article-title">Press</h2>
+        </header>
+
+        <!--
+          - Press: Press Posts List
+        -->
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <!-- Press Item: Fab City Challenge -->
+            <li class="blog-post-item">
+              <a href="https://fab.city/fab-city-challenge-a-new-form-of-learning-toward-a-sustainable-city/">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Press/fcc.jpg" alt="FCC Shenzhen 2024" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <!-- Press Item: Meta Information -->
+                  <div class="blog-meta">
+                    <p class="blog-category">Shenzhen</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2024-08-03">Aug 03, 2024</time>
+                  </div>
+
+                  <!-- Press Item: Title -->
+                  <h3 class="h3 blog-item-title">Fab City Challenge project presentation and demo</h3>
+
+                  <!-- Press Item: Description -->
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        ===================================================================
+        #ABOUT PAGE
+        ===================================================================
+      -->
+
+      <article class="about" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About</h2>
+        </header>
+
+        <!--
+          - About: Introduction Text
+        -->
+        <section class="about-text">
+          <p>
+            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+
+          <p>
+            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way. I created web design for many famous brand companies.
+          </p>
+        </section>
+
+        <!--
+          - About: Profile Image
+        -->
+        <section class="description">
+          <figure class="project-img" style="margin-top: 15px; margin-bottom: 15px;">
+            <img src="./assets/images/my-avatar.png" alt="About me" loading="lazy" style="max-width: 100%; height: auto; border-radius: 14px;">
+          </figure>
+        </section>
+
+        <!--
+          - About: Testimonials Section
+        -->
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <!-- Testimonial Item: Daniel lewis -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Testimonial Item: Jessica miller -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Testimonial Item: Emily evans -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Testimonial Item: Henry william -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

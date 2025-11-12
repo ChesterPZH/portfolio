@@ -341,6 +341,14 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.avatar-box img {
+  border-radius: 10px;
+  display: block;
+  width: 80px;
+  height: auto;
 }
 
 .info-content .name {
@@ -565,8 +573,7 @@ main {
   font-size: 14px;
   font-weight: var(--fw-3);
   line-height: 1.6;
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 
@@ -1365,9 +1372,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 15px; }
+  .avatar-box { 
+    border-radius: 15px; 
+    overflow: hidden;
+  }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { 
+    width: 120px; 
+    border-radius: 15px;
+  }
 
   .info-content .name { margin-bottom: 15px; font-size: 22px; }
 
@@ -1863,7 +1876,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 200px; }
+  .avatar-box img { 
+    width: 200px; 
+    border-radius: 20px;
+  }
 
   .info-content .name {
     white-space: nowrap;

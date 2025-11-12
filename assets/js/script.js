@@ -52,44 +52,55 @@ if (testimonialsItem && testimonialsItem.length > 0 && modalContainer && modalCl
 
 
 // custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selects = document.querySelectorAll("[data-select]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+// add event listener to each select button
+selects.forEach(function(select) {
+  select.addEventListener("click", function () { elementToggleFunc(this); });
+  
+  // find the corresponding select box and items
+  const filterSelectBox = select.closest(".filter-select-box");
+  const section = select.closest(".projects");
+  const selectItems = filterSelectBox.querySelectorAll("[data-select-item]");
+  const selectValue = filterSelectBox.querySelector("[data-selecct-value]");
+  
+  // add event in all select items for this select box
+  for (let i = 0; i < selectItems.length; i++) {
+    selectItems[i].addEventListener("click", function () {
 
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
+      let selectedValue = this.dataset.filterValue 
+        ? this.dataset.filterValue.toLowerCase() 
+        : this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      elementToggleFunc(select);
+      filterFunc(selectedValue, section);
 
-    let selectedValue = this.dataset.filterValue 
-      ? this.dataset.filterValue.toLowerCase() 
-      : this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
+    });
+  }
+});
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
+const filterFunc = function (selectedValue, section) {
+  // Get filter items only from the specified section, or all if no section specified
+  const itemsToFilter = section 
+    ? section.querySelectorAll("[data-filter-item]")
+    : filterItems;
 
-  for (let i = 0; i < filterItems.length; i++) {
+  for (let i = 0; i < itemsToFilter.length; i++) {
 
-    const categories = filterItems[i].dataset.category
-      ? filterItems[i].dataset.category.toLowerCase().split(/[\s,]+/)
+    const categories = itemsToFilter[i].dataset.category
+      ? itemsToFilter[i].dataset.category.toLowerCase().split(/[\s,]+/)
       : [];
 
     if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
+      itemsToFilter[i].classList.add("active");
     } else if (categories.includes(selectedValue)) {
-      filterItems[i].classList.add("active");
+      itemsToFilter[i].classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      itemsToFilter[i].classList.remove("active");
     }
 
   }
@@ -97,25 +108,31 @@ const filterFunc = function (selectedValue) {
 }
 
 // add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+// Group filter buttons by their parent section
+const filterSections = document.querySelectorAll(".projects");
+filterSections.forEach(function(section) {
+  const sectionFilterBtns = section.querySelectorAll("[data-filter-btn]");
+  const sectionSelectValue = section.querySelector("[data-selecct-value]");
+  let lastClickedBtn = sectionFilterBtns[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
+  for (let i = 0; i < sectionFilterBtns.length; i++) {
+    sectionFilterBtns[i].addEventListener("click", function () {
 
-  filterBtn[i].addEventListener("click", function () {
+      let selectedValue = this.dataset.filterValue 
+        ? this.dataset.filterValue.toLowerCase() 
+        : this.innerText.toLowerCase();
+      if (sectionSelectValue) {
+        sectionSelectValue.innerText = this.innerText;
+      }
+      filterFunc(selectedValue, section);
 
-    let selectedValue = this.dataset.filterValue 
-      ? this.dataset.filterValue.toLowerCase() 
-      : this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+      lastClickedBtn.classList.remove("active");
+      this.classList.add("active");
+      lastClickedBtn = this;
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
+    });
+  }
+});
 
 
 

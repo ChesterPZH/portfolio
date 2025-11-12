@@ -442,6 +442,17 @@ main {
   font-size: var(--fs-7);
 }
 
+.contact-info .contact-link {
+  color: var(--white-2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-1);
+}
+
+.contact-info .contact-link:hover {
+  color: var(--light-gray-70);
+}
+
 .contact-info address { font-style: normal; }
 
 .social-list {
@@ -2034,6 +2045,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: #3b82f6; /* blue-500 */
   text-decoration: underline;
   text-underline-offset: 2px;
+  transition: color var(--transition-1);
 }
 .u-link:hover {
   color: #2563eb; /* blue-600 */

@@ -437,19 +437,21 @@ main {
   margin-bottom: 2px;
 }
 
-.contact-info :is(.contact-link, time, address) {
+.contact-info :is(.white-u-link, time, address) {
   color: var(--white-2);
   font-size: var(--fs-7);
 }
 
-.contact-info .contact-link {
+.contact-info .white-u-link,
+.white-u-link {
   color: var(--white-2);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color var(--transition-1);
 }
 
-.contact-info .contact-link:hover {
+.contact-info .white-u-link:hover,
+.white-u-link:hover {
   color: var(--light-gray-70);
 }
 
@@ -1908,13 +1910,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .contacts-list { grid-template-columns: 1fr; }
 
-  .contact-info :is(.contact-link) {
+  .contact-info :is(.white-u-link) {
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
   }
 
-  .contact-info :is(.contact-link, time, address) {
+  .contact-info :is(.white-u-link, time, address) {
     --fs-7: 14px;
     font-weight: var(--fw-300);
   }
@@ -1951,6 +1953,36 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding-top: 20px; /* Add padding before each section */
 }
 
+/* Detail title: use theme font (Poppins, same as navigation and "What Else") */
+.detail-title {
+  color: var(--white-2);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-2);
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding-left: 0;
+  text-transform: none; /* Don't capitalize */
+}
+
+/* Detail author: smaller font, no bold, use Poppins */
+.detail-author {
+  color: var(--white-2);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-5);
+  margin-bottom: 15px;
+  margin-left: 0;
+  padding-left: 0;
+  font-weight: var(--fw-300); /* Not bold */
+  text-transform: none; /* Don't capitalize */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.detail-author span {
+  display: inline; /* Override global span { display: block; } to keep inline */
+}
+
 /* h3 title: align to article content left (same as article-title, no indent) */
 .description .h3 {
   margin-bottom: 10px;
@@ -1985,10 +2017,26 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-left: 5%; /* Align with text content */
 }
 
+/* Responsive figure: maintains aspect ratio, width controllable */
+.figure-responsive {
+  display: block;
+  margin: 15px 0;
+  width: 100%; /* Default full width */
+  max-width: 100%;
+}
+
+.figure-responsive img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
 /* Back links in description: align with text content (5% from article content left) */
 /* Only show back links in detail pages, not in main pages */
-.publication-detail .description > .u-link,
-.project-detail .description > .u-link {
+.publication-detail .description > .white-u-link,
+.project-detail .description > .white-u-link {
   margin-left: 5%; /* Align with text content */
   display: inline-block;
 }
@@ -2040,13 +2088,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /* Inline link utility for emphasized words */
-.u-link {
+.blue-u-link {
   display: inline;
   color: #3b82f6; /* blue-500 */
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color var(--transition-1);
 }
-.u-link:hover {
+.blue-u-link:hover {
   color: #2563eb; /* blue-600 */
 }

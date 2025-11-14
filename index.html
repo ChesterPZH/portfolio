@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/Home/photo.png" alt="Zhaohan(Chester) Pan" width="80">
+          <img src="./assets/images/home/photo.png" alt="Zhaohan(Chester) Pan" width="80">
         </figure>
 
         <div class="info-content">
@@ -262,7 +262,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/Home/craft2.svg" alt="craft2 lab icon" width="40">
+                <img src="./assets/images/home/craft2.svg" alt="craft2 lab icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -279,7 +279,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/Home/development.svg" alt="development icon" width="45">
+                <img src="./assets/images/home/development.svg" alt="development icon" width="45">
               </div>
 
               <div class="service-content-box">
@@ -296,7 +296,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/Home/design.svg" alt="design icon" width="40">
+                <img src="./assets/images/home/design.svg" alt="design icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -313,7 +313,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/Home/teaching.svg" alt="teaching icon" width="40">
+                <img src="./assets/images/home/teaching.svg" alt="teaching icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -535,7 +535,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Publications/rulAR/rulAR-tn.jpg" alt="rulAR" loading="lazy">
+                  <img src="./assets/images/publications/rular/rular-tn.jpg" alt="rulAR" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">rulAR</h3>
@@ -556,7 +556,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Publications/mARker/mARker-tn.jpg" alt="mARker" loading="lazy">
+                  <img src="./assets/images/publications/marker/marker-tn.jpg" alt="mARker" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">mARker</h3>
@@ -577,7 +577,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Publications/karP/karP-tn.jpg" alt="karP" loading="lazy">
+                  <img src="./assets/images/publications/karp/karp-tn.jpg" alt="karP" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">karP</h3>
@@ -598,7 +598,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Publications/TC/TC-tn.jpg" alt="Tangible Compass" loading="lazy">
+                  <img src="./assets/images/publications/tc/tc-tn.jpg" alt="Tangible Compass" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Tangible Compass</h3>
@@ -641,22 +641,57 @@
 
         <!-- Publication Detail: Highlights -->
         <section class="description">
-          <h3 class="h3">项目亮点</h3>
-          <h4 class="h4">Key Features</h4>
-          <p class="about-text">
-            - 空间定位与交互结合实现快捷测量。<br>
-            - 低学习成本，贴近真实工具使用心智模型。<br>
-            - 面向创作、教育与工程应用场景。
-          </p>
-        </section>
 
-        <!-- Publication Detail: Preview Image -->
-        <section class="description">
-          <h3 class="h3">预览图</h3>
-          <h4 class="h4">Preview</h4>
-          <figure class="project-img" style="margin-top: 15px;">
-            <img src="./assets/images/project-1.jpg" alt="rulAR preview" loading="lazy">
+          <h3 class="h3">Intro</h3>
+
+          <p class="about-text">
+            Existing augmented reality (AR) measuring tools enforce a monotonic measurement pattern that requires precise manual procedure. 
+            As spatial computing enters everyday practice, we present rulAR, an innovative AR spatial-scene measurement experiential prototype to 
+            surpass this stagnation. rulAR highlights low-manual to zero-manual task operation on an intelligent, scene-aware spatial interface: 
+            it intelligently labels measurement-critical points in the scene for selection, or automatically delivers comprehensive visualized 
+            dimensions immersively.
+          </p>
+
+          <br>
+
+          <h3 class="h3">Development</h3>
+
+          <p class="about-text">
+            rulAR is developed on Vision Pro (visionOS 2.0), with all designs completed using Apple's internal developer resources, including ARKit,
+            RealityKit, and UIKit.<br>
+            PlaneAnchor serves as the core of this work for obtaining the initial raw scene data, and we specifically utilized its high-fidelity 
+            mesh overlay data for rulAR.
+          </p>
+
+          <figure class="figure-responsive" style="width: 95%;">
+            <img src="./assets/images/publications/rular/rular-1.webp" alt="preview" loading="lazy">
           </figure>
+
+          <p class="about-text">
+            A robust backend pipeline of geometric scene reconstruction and rendering is implemented. One essential part is a a two-step optimization 
+            algorithm to re-construct raw mesh boundaries into useful attributes for rulAR's interface. This includes a Rotating Calipers MinArea 
+            Search and a Quantile-Trimming Huber Search, detailed in the paper.
+          </p>
+
+          <br>
+
+          <h3 class="h3">Interactivity</h3>
+
+          <p class="about-text">
+            By providing critical points in the scene, user can use lightweight  gaze-tap input to achieve select-measure process to query any 
+            interested dimension in the current environment. Measurement interaction can be also achieved purely through visual communication 
+            by directly rendering the plane-rectangle data.
+          </p>
+
+          <figure class="figure-responsive" style="width: 95%;">
+            <img src="./assets/images/publications/rular/rular-2.webp" alt="preview" loading="lazy">
+          </figure>
+
+          <p class="about-text">
+            rulAR presents a re-imagination of indoor digital measurement paradigm that is suitable for architectural design and engineering 
+            construction context.
+          </p>
+
         </section>
 
         <!-- Publication Detail: Back Link -->
@@ -682,22 +717,56 @@
 
         <!-- Publication Detail: Highlights -->
         <section class="description">
-          <h3 class="h3">项目亮点</h3>
-          <h4 class="h4">Key Features</h4>
-          <p class="about-text">
-            - 基于平板的空间绘制体验。<br>
-            - 支持多人协作与实时标注。<br>
-            - 兼容多种追踪方式与硬件配置。
-          </p>
-        </section>
 
-        <!-- Publication Detail: Preview Image -->
-        <section class="description">
-          <h3 class="h3">预览图</h3>
-          <h4 class="h4">Preview</h4>
-          <figure class="project-img" style="margin-top: 15px;">
-            <img src="./assets/images/project-1.jpg" alt="mARker preview" loading="lazy">
+          <h3 class="h3">Intro</h3>
+
+          <p class="about-text">
+            Mobile AR promises wider access to spatial sketching, but existing designs either pack interactions into dense on-screen controls and 
+            constant device motion, or impose additional hardware barriers.<br>
+            mARker is a proof-of-concept on the iPad + Apple Pencil Pro ecosystem, with a spatial & on-screen hybrid interface. It attains reliable 
+            stylus pose with a low-cost, self-fabricated cube and uses developer guideline-aligned Pencil gestures for writing-hand intuitive input, 
+            while AR session affords natural proxy-plane access and scene-aware placement.
+          </p>
+
+          <br>
+
+          <h3 class="h3">Development</h3>
+
+          <p class="about-text">
+            mARker's AR app is built under iPadOS 17.5 and supports two interfaces : a spatial interface for mid-air sketching via stylus tracking, 
+            and an on-screen interface for proxy plane sketching, entity transformation, along with auxiliary controls such as color selection.
+          </p>
+
+          <figure class="figure-responsive" style="width: 550px; max-width: 95%;">
+            <img src="./assets/images/publications/marker/marker-1.webp" alt="preview" loading="lazy">
           </figure>
+          
+          <p class="about-text">
+            The development of mARker benefits greatly from the new APIs introduced at WWDC 24 for Apple Pencil Pro. We implemented two sketching 
+            modes using these APIs: freehand and ruler. double-tap serves as a global toggle between these modes, while squeeze and barrel-roll 
+            are assigned to interface-specific sketching functions.
+          </p>
+
+          <br>
+
+          <h3 class="h3">Interactivity</h3>
+
+          <p class="about-text">
+            With mARker, user can directly sketch mid-air 3D content, or use traditional way to sketch projected 3D content and manipulate the stroke 
+            entities. Practical scenarios are introduced, including in-situ analysis diagram annotation on real object, and dimensioning an object by 
+            physically tracing it and evaluating the dimension.
+          </p>
+
+          <figure class="figure-responsive" style="width: 95%;">
+            <img src="./assets/images/publications/marker/marker-2.webp" alt="preview" loading="lazy">
+          </figure>
+
+          <p class="about-text">
+            Built on standardized tablet hardware and a hybrid stylus interface, mARker serves as a proof-of-concept ubiquitous spatial sketching tool 
+            that runs on commodity personal devices with a self-fabricatable tracking cube. These choices reduce operation overhead and hardware burden, 
+            broadening the reach and expressiveness of MAR spatial sketching.
+          </p>
+
         </section>
 
         <!-- Publication Detail: Back Link -->
@@ -718,27 +787,70 @@
         <section class="description">
           <h3 class="detail-title">karP: an experiential prototype for Kinesthetic Augmented Reality on mobile — Playful, Portable, Producible</h3>
           <h4 class="detail-author"><span style="text-decoration: underline;">Pan, Zhaohan</span>, Ge, G., Lu, H., Meng, Z., Wu, H., Yang, Q., Liang, J.</h4>
-          <h4 class="detail-author">In Proceedings of ACM DIS '25 Companion</h4>
+          <h4 class="detail-author">In Proceedings of <a href="https://dl.acm.org/doi/full/10.1145/3715668.3735607" class="blue-u-link" target="_blank" rel="noopener noreferrer">ACM DIS '25 Companion</a></h4>
         </section>
 
         <!-- Publication Detail: Highlights -->
         <section class="description">
-          <h3 class="h3">项目亮点</h3>
-          <h4 class="h4">Key Features</h4>
-          <p class="about-text">
-            - 交互技术与系统实现相结合。<br>
-            - 关注用户体验与可扩展性。<br>
-            - 面向研究与应用双场景。
-          </p>
-        </section>
 
-        <!-- Publication Detail: Preview Image -->
-        <section class="description">
-          <h3 class="h3">预览图</h3>
-          <h4 class="h4">Preview</h4>
-          <figure class="project-img" style="margin-top: 15px;">
-            <img src="./assets/images/project-2.png" alt="Publication preview" loading="lazy">
+          <h3 class="h3">Intro</h3>
+
+          <p class="about-text">
+            Kinesthetic interaction systems on mobile augmented reality (MAR) platforms remain largely conceptual. To explore this design space, we present 
+            karP, an experiential prototype that serves as a proof of concept for integrating kinesthetic systems with MAR.
+          </p>
+
+          <br>
+
+          <h3 class="h3">Design</h3>
+
+          <p class="about-text">
+            karP's device features a manipulandum-exoskeleton design that supports kinesthetic input and output for striking gestures with handheld items. 
+            Leveraging the native capabilities of MAR, the smartphone functions simultaneously as the visual-spatial interface and spatial tracker, 
+            coordinating with the kinesthetic device to control the avatar's physical interaction in virtual environments.
+          </p>
+
+          <figure class="figure-responsive" style="width: 400px; max-width: 95%;">
+            <img src="./assets/images/publications/karp/karp-1.webp" alt="preview" loading="lazy">
           </figure>
+
+          <p class="about-text">
+            karP's kinesthetic device is designed to be worn on the forearm in an exoskeleton-like configuration, allowing reaction forces during kinesthetic 
+            feedback to be supported directly by the user's body. The core manipulandum employs a two-joint spherical mechanism, whose mechanical structure is 
+            responsible both for capturing user input and delivering impulse haptic feedback. We specifically aligned the two joints with the user's wrist axes, 
+            which makes the two DoF independent. This alignment allows us to directly define the workspace based on the human wrist's natural range of motion 
+            and to compute impulse torques with respect to the wrist.
+          </p>
+
+          <figure class="figure-responsive" style="width: 550px; max-width: 95%;">
+            <img src="./assets/images/publications/karp/karp-2.webp" alt="preview" loading="lazy">
+          </figure>
+
+          <p class="about-text">
+            For actuation, we implemented the classic capstan structure, which amplifies the relatively weak torque output from compact brushless DC motors 
+            while ensuring smooth transmission during manipulation. The structural components are fabricated via 3D printing, assembled with screws, and 
+            connected using metal cables. All the components used are considered basic and highly accessible electromechanical parts, consistent with our 
+            vision of building an accessible and reproducible experiential prototype.
+          </p>
+
+          <p class="about-text">
+            We developed karP's AR application for iOS to run on iPhones, leveraging SceneKit for scene construction, physics simulation, and kinesthetic 
+            feedback computation, and ARKit for device camera tracking, environmental understanding, and spatial frame stabilization.<br>
+            Inspired by the interaction mechanisms found in XR games, we designed a Ball Playground for karP in delivering haptic I/O experinces. We 
+            introduce variation in the initial states of objects (static, dynamic), their physical properties (mass, radius), and the avatar's holding 
+            items, where all are unified by the core goal of engaging users through diverse and expressive physical interactions around the featured gesture.
+          </p>
+
+          <figure class="figure-responsive" style="width: 95%;">
+            <img src="./assets/images/publications/karp/karp-3.webp" alt="preview" loading="lazy">
+          </figure>
+
+          <p class="about-text">
+            karP demonstrated our preliminary exploration of integrating a complete and complex mechanical kinesthetic input / output system into a MAR platform. 
+            Our design achieved an initial level of playfulness while adapting to the inherent interaction style of mobile AR.
+          </p>
+          
+
         </section>
 
         <!-- Publication Detail: BibTeX Citation -->
@@ -771,12 +883,19 @@ doi       = {10.1145/3715668.3735607}
         <section class="description">
           <h3 class="detail-title">Tangible Compass: An Affordable and DIY-Friendly Handheld Kinesthetic Device for Haptic Accessible Navigation</h3>
           <h4 class="detail-author"><span style="text-decoration: underline;">Pan, Zhaohan</span>, Ge, G., Jiang, Z., Meng, Z., Wang, L., Wu, H., Wang, L., Liang, J., Wen, H.</h4>
-          <h4 class="detail-author">In Proceedings of ACM CHCHI '24</h4>
+          <h4 class="detail-author">In Proceedings of <a href="https://dl.acm.org/doi/full/10.1145/3758871.3758914" class="blue-u-link" target="_blank" rel="noopener noreferrer">ACM CHCHI '24</a></h4>
+
+          <figure class="figure-responsive" style="width: 95%;">
+            <img src="./assets/images/publications/tc/tc-1.webp" alt="preview" loading="lazy">
+          </figure>
+
         </section>
 
         <!-- Publication Detail: Highlights -->
         <section class="description">
+
           <h3 class="h3">Abstract</h3>
+
           <p class="about-text">
             While smartphone map navigation provides a convenient outdoor travel experience, its visual, audio, and vibration feedback mechanisms may fail to meet the accessibility 
             needs of particular users or account for temporary obstacles. Various devices have been developed to overcome these limitations, but they are often accompanied by high 
@@ -795,8 +914,14 @@ doi       = {10.1145/3715668.3735607}
             Its functionality is achieved through smartphone sensor data streaming, scenario-based algorithmic force rendering, and a compact one Degree of Freedom (1-DoF) 
             kinesthetic device transmitting forces. We featured interaction scenarios like route orientating navigation and clearance detection.
           </p>
-          <figure class="project-img" style="margin-top: 15px;">
-            <img src="./assets/images/project-1.jpg" alt="Publication preview" loading="lazy">
+
+          <figure class="figure-responsive" style="width: 95%;">
+            <img src="./assets/images/publications/tc/tc-2.webp" alt="preview" loading="lazy">
+          </figure>
+          <br><br>
+          <figure class="figure-responsive" style="width: 650px; max-width: 95%;">
+            <img src="./assets/images/publications/tc/tc-3.webp" alt="preview" loading="lazy">
+
           </figure>
         </section>
 
@@ -905,7 +1030,7 @@ doi       = {10.1145/3758871.3758914}
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Projects/3dpc-tn.jpg" alt="3dpc" loading="lazy">
+                  <img src="./assets/images/projects/3dpc-tn.jpg" alt="3dpc" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Defect Detection via 3D Point Clouds</h3>
@@ -924,7 +1049,7 @@ doi       = {10.1145/3758871.3758914}
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Projects/echo-tn.jpg" alt="ECHO" loading="lazy">
+                  <img src="./assets/images/projects/echo-tn.jpg" alt="ECHO" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">A 3D-games AI Assistant for BLV Players</h3>
@@ -943,12 +1068,87 @@ doi       = {10.1145/3758871.3758914}
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Projects/caligraphy-tn.jpg" alt="Caligraphy" loading="lazy">
+                  <img src="./assets/images/projects/caligraphy-tn.jpg" alt="Caligraphy" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Calligraphy Training Device</h3>
 
                 <p class="project-category">Haptics · Robotics</p>
+
+              </a>
+            </li>
+
+            <!-- Project Item: musicbox -->
+            <li class="project-item  active" data-filter-item data-category="uw">
+              <a href="#project-musicbox" data-detail-target="project-musicbox">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/musicbox-tn.jpg" alt="Musicbox" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Customizable and Interactive Music Box</h3>
+
+                <p class="project-category">Computational Modeling · 3D Printing</p>
+
+              </a>
+            </li>
+
+            <!-- Project Item: musicbox -->
+            <li class="project-item  active" data-filter-item data-category="uw">
+              <a href="#project-spider" data-detail-target="project-spider">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/spider-tn.jpg" alt="Spider" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Spider Web Modal Analysis</h3>
+
+                <p class="project-category">Direct Ink Writing · 3D Printing</p>
+
+              </a>
+            </li>
+
+            <!-- Project Item: Caligraphy -->
+            <li class="project-item  active" data-filter-item data-category="uw">
+              <a href="#project-barc" data-detail-target="project-barc">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/barc-tn.jpg" alt="BARC" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">FDM PEEK Mechanics Characterization</h3>
+
+                <p class="project-category">3D Printing · Mechanics</p>
+
+              </a>
+            </li>
+
+            <!-- Project Item: Capstone -->
+            <li class="project-item  active" data-filter-item data-category="uw">
+              <a href="#project-capstone" data-detail-target="project-capstone">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/capstone-tn.jpg" alt="Capstone" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">3D Printed Wingtip End Cap</h3>
+
+                <p class="project-category">Metal 3D Printing · Boeing</p>
 
               </a>
             </li>
@@ -992,7 +1192,7 @@ doi       = {10.1145/3758871.3758914}
           </p>
 
           <figure class="figure-responsive" style="width: 95%;">
-            <img src="./assets/images/Projects/3dpc-1.webp" alt="preview" loading="lazy">
+            <img src="./assets/images/projects/3dpc-1.webp" alt="preview" loading="lazy">
           </figure>
 
         </section>
@@ -1029,19 +1229,19 @@ doi       = {10.1145/3758871.3758914}
           </p>
 
           <figure class="figure-responsive" style="width: 95%;">
-            <img src="./assets/images/Projects/echo-1.webp" alt="preview" loading="lazy">
+            <img src="./assets/images/projects/echo-1.webp" alt="preview" loading="lazy">
           </figure>
           <br><br>
           <figure class="figure-responsive" style="width: 95%;">
-            <img src="./assets/images/Projects/echo-2.webp" alt="preview" loading="lazy">
+            <img src="./assets/images/projects/echo-2.webp" alt="preview" loading="lazy">
           </figure>
           <br><br>
           <figure class="figure-responsive" style="width: 95%;">
-            <img src="./assets/images/Projects/echo-3.webp" alt="preview" loading="lazy">
+            <img src="./assets/images/projects/echo-3.webp" alt="preview" loading="lazy">
           </figure>
           <br><br>
           <figure class="figure-responsive" style="width: 95%;">
-            <img src="./assets/images/Projects/echo-4.webp" alt="preview" loading="lazy">
+            <img src="./assets/images/projects/echo-4.webp" alt="preview" loading="lazy">
           </figure>
 
         </section>
@@ -1070,7 +1270,7 @@ doi       = {10.1145/3758871.3758914}
         <section class="description">
 
           <figure class="figure-responsive" style="width: 70%; max-width: 95%;">
-            <img src="./assets/images/Projects/cali-1.webp" alt="preview" loading="lazy">
+            <img src="./assets/images/projects/cali-1.webp" alt="preview" loading="lazy">
           </figure>
 
           <p class="about-text">
@@ -1120,7 +1320,7 @@ doi       = {10.1145/3758871.3758914}
               <a href="https://fab.city/fab-city-challenge-a-new-form-of-learning-toward-a-sustainable-city/">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/Press/fcc.jpg" alt="FCC Shenzhen 2024" loading="lazy">
+                  <img src="./assets/images/press/fcc.jpg" alt="FCC Shenzhen 2024" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
@@ -1152,7 +1352,7 @@ doi       = {10.1145/3758871.3758914}
               <a href="https://www.ce.washington.edu/news/article/2022-07-05/third-annual-boeing-capstone">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/Press/boeing.jpg" alt="Boeing Capstone 2022" loading="lazy">
+                  <img src="./assets/images/press/boeing.jpg" alt="Boeing Capstone 2022" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
@@ -1224,7 +1424,7 @@ doi       = {10.1145/3758871.3758914}
           - About: Profile Image
         -->
         <section class="description">
-          <figure class="project-img" style="margin-top: 15px; margin-bottom: 15px;">
+          <figure class="project-img" style="margin-top: 0; margin-bottom: 0;">
             <img src="./assets/images/my-avatar.png" alt="About me" loading="lazy" style="max-width: 100%; height: auto; border-radius: 14px;">
           </figure>
         </section>

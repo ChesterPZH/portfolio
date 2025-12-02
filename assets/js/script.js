@@ -104,35 +104,32 @@ const filterFunc = function (selectedValue, section) {
     }
 
   }
-
 }
 
 // add event in all filter button items for large screen
-// Group filter buttons by their parent section
-const filterSections = document.querySelectorAll(".projects");
-filterSections.forEach(function(section) {
-  const sectionFilterBtns = section.querySelectorAll("[data-filter-btn]");
-  const sectionSelectValue = section.querySelector("[data-selecct-value]");
-  let lastClickedBtn = sectionFilterBtns[0];
+let lastClickedBtn = filterBtn[0];
 
-  for (let i = 0; i < sectionFilterBtns.length; i++) {
-    sectionFilterBtns[i].addEventListener("click", function () {
+for (let i = 0; i < filterBtn.length; i++) {
 
-      let selectedValue = this.dataset.filterValue 
-        ? this.dataset.filterValue.toLowerCase() 
-        : this.innerText.toLowerCase();
-      if (sectionSelectValue) {
-        sectionSelectValue.innerText = this.innerText;
-      }
-      filterFunc(selectedValue, section);
+  filterBtn[i].addEventListener("click", function () {
+    
+    // Find the section this button belongs to
+    const section = this.closest(".projects");
+    let selectedValue = this.dataset.filterValue 
+      ? this.dataset.filterValue.toLowerCase() 
+      : this.innerText.toLowerCase();
+    
+    // Deactivate previously clicked button in THIS section, if tracked, or handle global logic
+    // Since there are multiple filter groups, we need to deactivate siblings
+    const siblingButtons = this.parentElement.parentElement.querySelectorAll("[data-filter-btn]");
+    siblingButtons.forEach(btn => btn.classList.remove("active"));
+    
+    this.classList.add("active");
+    filterFunc(selectedValue, section);
 
-      lastClickedBtn.classList.remove("active");
-      this.classList.add("active");
-      lastClickedBtn = this;
+  });
 
-    });
-  }
-});
+}
 
 
 
@@ -161,67 +158,76 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-const navigateToPage = function (pageName) {
-  // Normalize page name (trim and lowercase)
-  pageName = pageName.trim().toLowerCase();
-  let matchedNav = false;
-  let matchedPage = false;
+// Helper to activate a specific page by data-page value
+const navigateToPage = function(targetPage) {
+  let pageFound = false;
 
-  // First, remove active from all pages
-  for (let i = 0; i < pages.length; i++) {
-    pages[i].classList.remove("active");
-  }
-
-  // Then, add active to matching page(s)
-  for (let i = 0; i < pages.length; i++) {
-    if (pages[i].dataset.page === pageName) {
-      pages[i].classList.add("active");
-      matchedPage = true;
-    }
-  }
-
-  // Update navigation links
-  for (let i = 0; i < navigationLinks.length; i++) {
-    const linkText = navigationLinks[i].textContent.trim().toLowerCase();
-    if (linkText === pageName) {
-      navigationLinks[i].classList.add("active");
-      matchedNav = true;
+  for (let j = 0; j < pages.length; j++) {
+    if (targetPage === pages[j].getAttribute("data-page")) {
+      pages[j].classList.add("active");
+      window.scrollTo(0, 0);
+      pageFound = true;
     } else {
-      navigationLinks[i].classList.remove("active");
+      pages[j].classList.remove("active");
     }
   }
 
-  // If no matching page found, ensure all pages are inactive
-  if (!matchedPage) {
-    for (let i = 0; i < pages.length; i++) {
-      pages[i].classList.remove("active");
+  // Update navbar state if the target page corresponds to a nav link
+  if (pageFound) {
+    for (let k = 0; k < navigationLinks.length; k++) {
+      const navAttr = navigationLinks[k].getAttribute("data-nav-link");
+      const navTarget = navAttr ? navAttr.trim().toLowerCase() : "";
+      
+      if (navTarget === targetPage || (navTarget === 'research' && targetPage.startsWith('research-'))) {
+         // Optional: keep 'Research' tab active if inside a research detail page? 
+         // For now, let's just highlight exact matches or keep it simple.
+         if (navTarget === targetPage) {
+            navigationLinks[k].classList.add("active");
+         } else {
+            navigationLinks[k].classList.remove("active");
+         }
+      } else {
+        navigationLinks[k].classList.remove("active");
+      }
     }
   }
-
-  window.scrollTo(0, 0);
-};
+}
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function (event) {
-    event.preventDefault();
-    const pageName = this.textContent.trim().toLowerCase();
-    // Clear URL hash to prevent navigation issues
-    if (window.location.hash) {
-      window.history.replaceState(null, '', window.location.pathname + window.location.search);
-    }
-    navigateToPage(pageName);
+  navigationLinks[i].addEventListener("click", function () {
+
+    // Use getAttribute for better compatibility and stability
+    // Trim whitespace to avoid matching errors
+    const attrValue = this.getAttribute("data-nav-link");
+    const targetPage = attrValue ? attrValue.trim().toLowerCase() : this.innerHTML.trim().toLowerCase();
+
+    navigateToPage(targetPage);
   });
 }
 
-const detailLinks = document.querySelectorAll("[data-detail-target]");
+// Detail Page Navigation Logic
+// Listen for clicks on elements with data-detail-target attribute
+document.addEventListener("click", function(e) {
+  // Find closest element with data-detail-target attribute (handles clicks on children like images/icons)
+  const trigger = e.target.closest("[data-detail-target]");
+  if (trigger) {
+    e.preventDefault(); // Prevent default anchor jump behavior
+    const targetPage = trigger.getAttribute("data-detail-target");
+    navigateToPage(targetPage);
+  }
+});
 
-for (let i = 0; i < detailLinks.length; i++) {
-  detailLinks[i].addEventListener("click", function (event) {
-    event.preventDefault();
-    const targetPage = this.dataset.detailTarget;
-    if (targetPage) {
-      navigateToPage(targetPage);
-    }
-  });
-}
+/**
+ * Gaze Effect Logic
+ * Tracks mouse movement and updates CSS variables for the blur overlay
+ */
+document.addEventListener("mousemove", (e) => {
+  const gazeOverlay = document.getElementById("gaze-overlay");
+  if (gazeOverlay) {
+    const x = e.clientX;
+    const y = e.clientY;
+    gazeOverlay.style.setProperty("--x", `${x}px`);
+    gazeOverlay.style.setProperty("--y", `${y}px`);
+  }
+});

@@ -27,6 +27,9 @@
 
 <body>
 
+  <!-- Gaze Effect Overlay -->
+  <div id="gaze-overlay"></div>
+
   <!--
     - #MAIN
   -->
@@ -124,7 +127,7 @@
 
         <div class="separator"></div>
 
-        <ul class="social-list">
+        <!-- <ul class="social-list">
 
           <li class="social-item">
             <a href="#" class="social-link">
@@ -144,7 +147,7 @@
             </a>
           </li>
 
-        </ul>
+        </ul> -->
 
       </div>
 
@@ -169,23 +172,23 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Home</button>
+            <button class="navbar-link  active" data-nav-link="home">Home</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Research</button>
+            <button class="navbar-link" data-nav-link="research">Research</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
+            <button class="navbar-link" data-nav-link="projects">Projects</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Press</button>
+            <button class="navbar-link" data-nav-link="press">Press</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>About</button>
+            <button class="navbar-link" data-nav-link="about">About</button>
           </li>
 
         </ul>
@@ -1392,9 +1395,28 @@ doi       = {10.1145/3758871.3758914}
         -->
         <section class="testimonials">
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+          <h3 class="h3 testimonials-title">Advisors & Collaborators</h3>
 
           <ul class="testimonials-list has-scrollbar">
+
+            <!-- Testimonial Item: Lit Liao-->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/abuot/icon.webp" alt="Lit Liao" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Lit Liao, Litchee Lab</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Placeholder for Lit Liao's testimonial.
+                  </p>
+                </div>
+
+              </div>
+            </li>
 
             <!-- Testimonial Item: Richard Wiebe -->
             <li class="testimonials-item">
@@ -1415,24 +1437,15 @@ doi       = {10.1145/3758871.3758914}
               </div>
             </li>
 
-            <!-- Testimonial Item: Bei Jiang -->
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+          </ul>
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/abuot/icon.webp" alt="Bei Jiang" width="60" data-testimonials-avatar>
-                </figure>
+        </section>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Bei Jiang, Stanford CEE</h4>
+        <section class="testimonials">
 
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Chester is genuinely enthusiastic about his research, and it shows in the way he approaches every project. He is always willing to help others and creates a supportive environment for the people around him.
-                  </p>
-                </div>
+          <h3 class="h3 testimonials-title">Co-workers & Peers</h3>
 
-              </div>
-            </li>
+          <ul class="testimonials-list has-scrollbar">
 
             <!-- Testimonial Item: Bei Jiang -->
             <li class="testimonials-item">
@@ -1453,8 +1466,34 @@ doi       = {10.1145/3758871.3758914}
               </div>
             </li>
 
-            
+          </ul>
 
+        </section>
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Mentees & Students</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <!-- Testimonial Item: Bei Jiang -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/abuot/icon.webp" alt="Bei Jiang" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Bei Jiang, Stanford CEE</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Chester is genuinely enthusiastic about his research, and it shows in the way he approaches every project. He is always willing to help others and creates a supportive environment for the people around him.
+                  </p>
+                </div>
+
+              </div>
+            </li>
 
           </ul>
 

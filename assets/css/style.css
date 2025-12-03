@@ -107,14 +107,14 @@
    * spatial glass effect (transparent & blurry)
    */
   --glass-bg-subtle: rgba(255, 255, 255, 0.03); /* Almost fully transparent */
-  --glass-border-subtle: rgba(255, 255, 255, 0.15); /* Slightly stronger border for visibility */
-  --glass-blur-subtle: blur(40px) saturate(180%); /* Strong blur + saturation boost */
+  --glass-border-subtle: rgba(255, 255, 255, 0); /* Slightly stronger border for visibility */
+  --glass-blur-subtle: blur(30px) saturate(120%); /* Strong blur + saturation boost */
   
   /**
    * transition
    */
 
-  --transition-1: 0.25s ease;
+  --transition-1: 0.3s ease;
   --transition-2: 0.5s ease-in-out;
 
 }
@@ -224,7 +224,7 @@ article {
 .separator {
   width: 100%;
   height: 1px;
-  background: var(--jet);
+  background: transparent;
   margin: 16px 0;
 }
 
@@ -303,8 +303,8 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  width: 7px; /* Increased from 5px for better usability */
+  height: 7px; /* Increased from 5px for better usability */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -425,7 +425,7 @@ main {
   border: 1px solid var(--glass-border-subtle);
   padding: 10px;
   box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
+  transition: color var(--transition-1), box-shadow var(--transition-1), background var(--transition-1);
   z-index: 1;
 }
 
@@ -433,11 +433,14 @@ main {
   display: none;
 }
 
-.info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+.info_more-btn:hover { 
+  background: var(--glass-bg-subtle); /* Keep background same as default */
+  color: var(--light-gray-70); /* Darken text color like navbar */
+  box-shadow: var(--shadow-2);
+  z-index: 2;
+}
 
-.info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+.info_more-btn:hover::before { display: none; }
 
 .info_more-btn span { display: none; }
 
@@ -1037,7 +1040,16 @@ main {
   100% { transform: scale(1); }
 }
 
-.project-item > a { width: 100%; }
+.project-item > a { 
+  width: 100%; 
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-item > a:hover {
+  transform: scale(1.02);
+  z-index: 10; /* Ensure the hovered item is above others */
+}
 
 .project-img {
   position: relative;
@@ -1047,58 +1059,47 @@ main {
   overflow: hidden;
   margin-bottom: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Added shadow to images themselves */
+  transition: box-shadow 0.3s ease; /* Smooth pop animation for the whole box */
+  transform-origin: center;
 }
 
 .project-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: 1;
-  transition: var(--transition-1);
+  display: none; /* Remove dark overlay */
 }
-
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
 
 .project-item-icon-box {
-  --scale: 0.8;
-
-  background: var(--jet);
-  color: var(--orange-yellow-crayola);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(var(--scale));
-  font-size: 20px;
-  padding: 18px;
-  border-radius: 12px;
-  opacity: 0;
-  z-index: 1;
-  transition: var(--transition-1);
+  display: none; /* Remove the eye icon */
 }
-
-.project-item > a:hover .project-item-icon-box {
-  --scale: 1;
-  opacity: 1;
-}
-
-.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
 .project-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition-1);
+  /* Removed scale transform on hover from here */
 }
 
-.project-item > a:hover img { transform: scale(1.1); }
+/* Spatial Hover Effect: Scale up the image box AND move text down */
+.project-item > a:hover .project-img { 
+  /* Whole box pops out */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6); /* Deep shadow for lifting effect */
+}
+
+/* Move text down when hovering the card */
+.project-item > a:hover .project-title,
+.project-item > a:hover .project-subtitle,
+.project-item > a:hover .project-category {
+  /* Push text down slightly */
+  transition: transform 0.3s ease;
+}
 
 .project-title,
 .project-subtitle,
-.project-category { margin-left: 10px; }
+.project-category { 
+  position: relative; /* Ensure text is positioned */
+  z-index: 2; /* Ensure text is above image shadow */
+  margin-left: 10px; 
+  transition: transform 0.3s ease;
+}
 
 .project-title {
   color: var(--white-2);
@@ -1164,6 +1165,12 @@ pre, code, .bibtex {
   border-radius: 16px;
   z-index: 1;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: block; /* Ensure it behaves as a block for transform */
+}
+
+.blog-post-item > a:hover {
+  transform: scale(1.02);
+  z-index: 10;
 }
 
 .blog-post-item > a::before {
@@ -1175,18 +1182,33 @@ pre, code, .bibtex {
   height: 200px;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Initial shadow */
+  transition: box-shadow 0.3s ease; /* Smooth animation */
+  transform-origin: center;
 }
 
 .blog-banner-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
+/* Spatial Hover Effect for Press/Blog: Pop out the image box */
+.blog-post-item > a:hover .blog-banner-box { 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
 
-.blog-content { padding: 15px; }
+/* Move text down when hovering */
+.blog-post-item > a:hover .blog-content {
+  transition: transform 0.3s ease;
+}
+
+.blog-content { 
+  padding: 15px; 
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
 
 .blog-meta {
   display: flex;
@@ -1948,7 +1970,8 @@ textarea.form-input::-webkit-resizer { display: none; }
    * SIDEBAR
    */
 
-  .sidebar {
+  .sidebar,
+  .sidebar.active {
     position: sticky;
     top: 60px;
     max-height: max-content;

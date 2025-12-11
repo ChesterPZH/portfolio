@@ -892,9 +892,10 @@ main {
   position: absolute;
   top: -25px;
   left: -30px;
-  width: 1px;
+  width: 2px;
   height: calc(100% + 50px);
   background: var(--jet);
+  opacity: 0.8;
 }
 
 .timeline-item::after {
@@ -2157,18 +2158,20 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: inline-block;
 }
 
-/* BibTeX code block styling - ACM DL style with fixed width and word wrap */
+/* BibTeX code block styling - Glassmorphism style */
 .description .bibtex-code {
   position: relative;
   margin-left: 5%; /* Align with text content */
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
-  background: var(--border-gradient-onyx);
+  background: var(--glass-bg-subtle);
+  backdrop-filter: var(--glass-blur-subtle);
+  -webkit-backdrop-filter: var(--glass-blur-subtle);
+  border: 1px solid var(--glass-border-subtle);
   border-radius: 14px;
   box-shadow: var(--shadow-2);
-  max-width: 800px; /* Fixed maximum width */
-  width: 100%;
+  width: calc(100% - 5%); /* Ensure it fills the remaining width properly */
   max-height: 400px; /* Maximum height before vertical scrolling */
   overflow-y: auto; /* Vertical scrolling if content exceeds max-height */
   overflow-x: hidden; /* No horizontal scrolling */
@@ -2182,12 +2185,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .description .bibtex-code::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--bg-gradient-jet);
-  border-radius: inherit;
-  z-index: -1;
+  display: none;
 }
 
 .description .bibtex-code code {
@@ -2201,6 +2199,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   position: relative;
   z-index: 1;
   width: 100%;
+  
+  /* Reset styles that might be inherited from global code selector */
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 0;
 }
 
 /* Inline link utility for emphasized words */

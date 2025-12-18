@@ -167,7 +167,7 @@ html {
 }
 
 body { 
-  background: url('../images/uw_bg.jpg') no-repeat center center fixed;
+  background: url('../images/uw_bg.webp') no-repeat center center fixed;
   background-size: cover;
   /* Removed global blur filter on body to allow JS control via overlay */
 }
